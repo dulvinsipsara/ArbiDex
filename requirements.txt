@@ -1,0 +1,8 @@
+streamlit
+pandas
+requests
+altair
+sqlalchemy
+rapidfuzz          # untuk fuzzy matching antar judul
+apscheduler        # kalau mau deteksi arbitrase otomatis tiap interval
+rapidfuzz
